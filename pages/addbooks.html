@@ -5,11 +5,13 @@
 </head>
 <body>
 	<h1>Add a book</h1>
-	<form>
+	<form id="addbook"> <!--after "form", action="" -->
 		Book title<br>
 		<input type="text" name="title"><br>
+
 		Book author<br>
 		<input type="text" name="author">
+
 		Rating<br>
 		<input type="radio" name="rating" value="0" checked>0
 		<input type="radio" name="rating" value="1">1
@@ -17,10 +19,15 @@
 		<input type="radio" name="rating" value="3">3
 		<input type="radio" name="rating" value="4">4
 		<input type="radio" name="rating" value="5">5<br>
+
 		Comment<br>
 		<textarea name="comment" rows="10" cols="30"></textarea><br>
-		<input type="submit" name="Add book"><br>
+
+		<button type="button" onclick="submitForm()">
+			Add name
+		</button><br>
 	</form>
 	<a href="../index.html">Go back</a>
+	<script src="../main.js"></script>
 </body>
 </html>
