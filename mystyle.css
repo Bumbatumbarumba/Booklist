@@ -2,3 +2,13 @@
 Created by Bartosz Kosakowski
 Contains the style of Bart's Books
 */
+
+/*background colour for the main page*/
+body {
+	background-color: #F8ECC2;
+}
+
+#mainImg {
+	height: 200px;
+	width: 250px;
+}
