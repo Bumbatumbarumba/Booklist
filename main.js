@@ -6,6 +6,9 @@ list of books on the front page
 */
 
 /*
+Takes the data from the hmtl form and adds it into a json file
+Or rather, it would do that, if I could figure out how to get it
+to work
 */
 function submitForm(){
 	const textboxInput = document.getElementById("addbook");
