@@ -1,7 +1,7 @@
 /*
 Created by Bartosz Kosakowski
 01/11/2018
-(NOT) SIMPLE (VERY DAMN HARD APPARENTLY) js code to add some features to my website, namely adding new books to the
+js code to add some features to my website, namely adding new books to the
 list of books on the front page 
 */
 
