@@ -7,8 +7,6 @@ list of books on the front page
 
 /*
 */
-var fs = require("fs");
-
 function submitForm(){
 	const textboxInput = document.getElementById("addbook");
 	var rating = "";
