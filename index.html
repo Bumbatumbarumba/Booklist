@@ -11,10 +11,39 @@ A simple website that keeps track of books I've read and some stuff related to i
 </head>
 <body>
 	<img src="images/bookshelf.png", id="mainImg">
-	<h1>Bart's Books</h1>
-	<p>A website that contains a list of books that I've read, along with the rating </p>
-	<a href="pages/addbooks.html">Add a book</a>
-	<p>List of books</p>
-	<li>This list be empty yo</li>
+	<h1 id="pagetitle">Bart's Books</h1>
+	<p id="pagedesc">A website that contains a list of books that I've read, along with the rating!</p>
+
+	<form id="addbook">
+		Book title<br>
+		<input type="text" name="title"><br>
+		
+		Book author<br>
+		<input type="text" name="author"><br>
+
+		Rating<br>
+		<input type="radio" name="rating" value="0" checked>0
+		<input type="radio" name="rating" value="1">1
+		<input type="radio" name="rating" value="2">2
+		<input type="radio" name="rating" value="3">3
+		<input type="radio" name="rating" value="4">4
+		<input type="radio" name="rating" value="5">5<br>
+
+		Comment<br>
+		<textarea name="comment" rows="10" cols="30"></textarea><br>
+
+		<button type="button" onclick="submitForm()" id="submitbutton">
+			Add name
+		</button><br>
+	</form>
+
+	<p id="booklistheader">List of books</p>
+	<ul>
+		<div id="books"></div>
+	</ul>
+	<!--<a href="pages/addbooks.html">Add a book</a>-->
 </body>
+	<script src="main.js">
+			getbooklist();
+	</script>
 </html>

@@ -1,14 +1,16 @@
 /*
 Created by Bartosz Kosakowski
 01/11/2018
-js code to add some features to my website, namely adding new books to the
-list of books on the front page 
+js code to add new books to the list of books on the front page  
 */
 
+//holds the list of books
+var booklist = [];
+//booklist gets turned into a string with html tags so that we can display it
+var bookinfo = '';
 /*
-Takes the data from the hmtl form and adds it into a json file.
-Or rather, it would do that, if I could figure out how to get it
-to work.
+Takes data out of the form, turns it into a list, then adds it into the
+list of books.
 */
 function submitForm(){
 	const textboxInput = document.getElementById("addbook");
@@ -18,30 +20,23 @@ function submitForm(){
 			rating = textboxInput[i].value;
 		}
 	}
-
-	/*var addBookParams = JSON.stringify({"title": textboxInput[0].value, 
-		"author": textboxInput[1].value, 
-		"rating": rating, 
-		"comments":textboxInput[8].value});
-	window.alert(addBookParams);
-	window.alert(JSON.parse(addBookParams).title);*/
-
-	/*var newBook = new bookData(textboxInput[0].value, textboxInput[1].value, rating, textboxInput[8].value);
-	window.alert(JSON.stringify(newBook));
+	booklist.unshift([textboxInput[0].value, textboxInput[1].value, rating, textboxInput[8].value]);
+	addbook();
 	resetForm();
-	window.alert("Book added to list!");*/
 }
 
 //used to reset the add book form once the user submits their info
 function resetForm(){
 	document.getElementById("addbook").reset();
 }
-/*
-class bookData{
-	constructor(title, author, rating, comment){
-		this.title = title;
-		this.author = author;
-		this.rating = rating;
-		this.comment = comment;
+
+function addbook(){
+	for (var i = 0; i < booklist.length; i++){
+		bookinfo += '<li>'
+		for (var j = 0; j < booklist[i].length; j++){
+			bookinfo += booklist[i][j] + '<br>';
+		}
+		bookinfo += '</li>';
 	}
-}*/
+	document.getElementById("books").innerHTML = bookinfo;
+}
