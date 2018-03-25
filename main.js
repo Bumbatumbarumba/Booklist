@@ -4,10 +4,6 @@ Created by Bartosz Kosakowski
 js code to add new books to the list of books on the front page  
 */
 
-//holds the list of books
-var booklist = [];
-//booklist gets turned into a string with html tags so that we can display it
-var bookinfo = '';
 /*
 Takes data out of the form, turns it into a list, then adds it into the
 list of books.
@@ -20,8 +16,7 @@ function submitForm(){
 			rating = textboxInput[i].value;
 		}
 	}
-	booklist.unshift([textboxInput[0].value, textboxInput[1].value, rating, textboxInput[8].value]);
-	addbook();
+	addbook([textboxInput[0].value, textboxInput[1].value, rating, textboxInput[8].value]);
 	resetForm();
 }
 
@@ -30,13 +25,12 @@ function resetForm(){
 	document.getElementById("addbook").reset();
 }
 
-function addbook(){
-	for (var i = 0; i < booklist.length; i++){
-		bookinfo += '<li>'
-		for (var j = 0; j < booklist[i].length; j++){
-			bookinfo += booklist[i][j] + '<br>';
-		}
-		bookinfo += '</li>';
+//
+function addbook(formContent){
+	var bookinfo = '<li>';
+	for (var i = 0; i < formContent.length; i++){
+		bookinfo += formContent[i] + '<br>';
 	}
-	document.getElementById("books").innerHTML = bookinfo;
+	bookinfo += '</li>';
+	document.getElementById("books").innerHTML += bookinfo;
 }
