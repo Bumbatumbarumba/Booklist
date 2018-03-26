@@ -9,8 +9,31 @@ body {
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
-	border-style: dotted;
+	border-style: solid;
 	border-color: #993399;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.sitecontents, #pagetitle, p {
+	font-family: Garamond;
+	color: black;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-style: italic;
+}
+
+#pagetitle {
+	border-style: solid;
+	border-color: #993399;
+	margin-left: 43%;
+	margin-right: 43%;
 }
 
 #mainImg {
@@ -25,4 +48,21 @@ body {
 
 #pagetitle {
 	text-align: center;
+}
+
+.sitecontents {
+	display: grid;
+	grid-template-columns: 20%;
+	grid-template-rows: 8% 20%;
+	/*grid-row-gap: 10px;*/
+}
+
+#bookform {
+	display: inline-block;
+	align-self: center;
+	background-color: orange;
+}
+
+#pagedesc {
+	background-color: green;
 }
