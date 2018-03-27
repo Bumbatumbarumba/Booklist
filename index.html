@@ -19,7 +19,7 @@ A simple website that keeps track of books I've read and some stuff related to i
 		<p id="pagedesc">A website that contains a list of books that I've read, along with the rating! Check out the 
 			<a href="https://github.com/Bumbatumbarumba/Booklist" id="gitlink" target="_blank">GitHub repo!</a>
 		</p>
-		
+	
 		<div id="bookform">
 			<form id="addbook">
 				<div id="title">Book title<br></div>
@@ -27,7 +27,6 @@ A simple website that keeps track of books I've read and some stuff related to i
 				
 				<div id="author">Book author<br></div>
 				<input type="text" name="author"><br>
-
 				<div id="rating">Rating<br></div>
 				<input id="radiobutton" type="radio" name="rating" value="0" checked>0
 				<input id="radiobutton" type="radio" name="rating" value="1">1
@@ -35,23 +34,22 @@ A simple website that keeps track of books I've read and some stuff related to i
 				<input id="radiobutton" type="radio" name="rating" value="3">3
 				<input id="radiobutton" type="radio" name="rating" value="4">4
 				<input id="radiobutton" type="radio" name="rating" value="5">5<br>
-
 				<div id="comments">Comment<br></div>
 				<textarea name="comment" rows="10" cols="30"></textarea><br>
-
 				<button type="button" onclick="submitForm()" id="submitbutton">
 					Add name
 				</button><br>
 			</form>
 		</div>
 	</div>
-
 	<!-- book list and content related to it -->
-	<p id="booklistheader">List of books</p>
-	<ul>
-		<!-- pretty sure the book list gets appended onto this div  -->
-		<div id="books"></div>
-	</ul>
+	<div>
+		<p id="booklistheader">List of books</p>
+		<ul>
+			<!-- book list gets appended onto this div  -->
+			<div id="books"></div>
+		</ul>
+	</div>
 
 	<!--would link to separate page to add books but silly static pages are silly
 		<a href="pages/addbooks.html">Add a book</a>-->
