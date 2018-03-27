@@ -25,12 +25,17 @@ function resetForm(){
 	document.getElementById("addbook").reset();
 }
 
-//
+//adds 
 function addbook(formContent){
-	var bookinfo = '<li>';
+	var bookinfo = '<ul id="bookinfo">';
 	for (var i = 0; i < formContent.length; i++){
-		bookinfo += formContent[i] + '<br>';
+		if (i == 2){
+			bookinfo += '<div id="info' + i + '">' + formContent[i] + '/5' + '<br>' + '</div>';
+		}
+		else{
+			bookinfo += '<div id="info' + i + '">' + formContent[i] + '<br>' + '</div>';
+		}
 	}
-	bookinfo += '</li>';
-	document.getElementById("books").innerHTML += bookinfo;
+	bookinfo += '</ul>' + '<br>';
+	document.getElementById("books").innerHTML += bookinfo.toLowerCase();
 }
