@@ -8,6 +8,10 @@ js code to add new books to the list of books on the front page
 Takes data out of the form, turns it into a list, then adds it into the
 list of books.
 */
+
+addbook(["A Song of Ice and Fire", "George RR Martin", "5", "Easily the best book series I have ever read, it is absolutely excellent."]);
+addbook(["The Cosmos", "Carl Sagan", "5", "Such an amazing book, Sagan does a fantastic job detailing about real life historical events with the prose of a fantasy writer."]);
+addbook(["The Kingkiller Chronicle", "Patrick Rothfuss", "5", "Wonderfully written, and the characters are really cool and interesting."]);
 function submitForm(){
 	const textboxInput = document.getElementById("addbook");
 	var rating = "";
