@@ -63,14 +63,13 @@ a:hover {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 8% 20%;
-	margin-right: 80%;
+	/*margin-right: 80%;*/
 	border-style: solid;
 	border-width: 2px;
 	border-color: #993399;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 15px;
-	float: left;
 }
 
 #bookform {
@@ -88,9 +87,14 @@ button {
 	padding-bottom: 12px;
 }
 
+#sitegrid {
+	display: grid;
+	grid-template-columns: 20% 20%;
+	grid-column-gap: 20%;
+}
+
 #booklist {
-	float: right;
-	padding-left: 1000px;
+	justify-content: center;
 }
 
 /*divs with the below id's are created by the js file*/
