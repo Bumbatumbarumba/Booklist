@@ -62,7 +62,8 @@ a:hover {
 .sitecontents {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 8% 20%;
+	/*grid-template-rows: 8% 20%;*/
+	grid-auto-rows: auto;
 	/*margin-right: 80%;*/
 	border-style: solid;
 	border-width: 2px;
