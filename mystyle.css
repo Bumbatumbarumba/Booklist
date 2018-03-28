@@ -70,11 +70,12 @@ a:hover {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 15px;
+	max-height: 500px;
 }
 
 #bookform {
 	display: flex;
-	align-items: center;
+	/*align-items: center;*/
 	justify-content: center;
 }
 
@@ -95,6 +96,9 @@ button {
 
 #booklist {
 	justify-content: center;
+	overflow: auto;
+    overflow-y: scroll;
+    max-height: 450px;
 }
 
 /*divs with the below id's are created by the js file*/
