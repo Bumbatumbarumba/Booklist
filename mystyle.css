@@ -115,10 +115,31 @@ button {
 	text-transform: capitalize;
 }
 /*rating*/
-#info2 {
+/*#info2 {
 	
-}
+}*/
 /*comments about the book*/
-#info3 {
+/*#info3 {
 	
+}*/
+
+/*these elements are for the scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
