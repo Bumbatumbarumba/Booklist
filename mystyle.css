@@ -97,9 +97,14 @@ button {
 
 #booklist {
 	justify-content: center;
+	/*overflow: auto;
+    overflow-y: scroll;*/
+    max-height: 450px;
+}
+
+#books {
 	overflow: auto;
     overflow-y: scroll;
-    max-height: 450px;
 }
 
 /*divs with the below id's are created by the js file*/
